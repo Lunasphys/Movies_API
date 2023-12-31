@@ -1,3 +1,44 @@
+
+
+@media only screen and (max-width: 600px) {
+  .custom {
+    font-size: 12px; /* Pour les écrans <= 600px */
+  }
+  .nav-col {
+    font-size: 12px; /* Pour les écrans <= 600px */
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .custom {
+    font-size: 16px; /* Pour les écrans > 600px */
+  }
+  .nav-col {
+    font-size: 16px; /* Pour les écrans > 600px */
+  }
+}
+
+ion-searchbar.custom {
+  --background: #19422d;
+  --color: #fff;
+  --placeholder-color: #fff;
+  --icon-color: #fff;
+  --clear-button-color: #fff;
+  --border-radius: 4px;
+  font-size: 8px;
+}
+
+ion-searchbar.md.custom {
+  --cancel-button-color: #fff;
+  --font-size: 18px
+}
+
+ion-select {
+  --border-color: #3880ff;
+  --box-shadow: 0 4px 5px -5px rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  --font-size: 18px;
+}
+
 ion-footer {
   ion-toolbar {
     --background: #eeeeee;
