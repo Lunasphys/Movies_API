@@ -19,6 +19,22 @@ const routes: Routes = [
         (m) => m.MovieDetailsPageModule
       ),
   },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
+  },
+  {
+    path: 'my-list',
+    loadChildren: () => import('./pages/my-list/my-list.module').then( m => m.MyListPageModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
+  },
+  {
+    path: 'profil',
+    loadChildren: () => import('./pages/profil/profil.module').then( m => m.ProfilPageModule)
+  },
 ];
 
 @NgModule({

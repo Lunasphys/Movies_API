@@ -4,10 +4,76 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">movieDetails</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/movies"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ movie?.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="movie as movie;">
+    <img [src]="imageBaseUrl + '/w400' + movie?.poster_path" />
+
+    <ion-card-header>
+      <ion-card-title> {{ movie?.title }} </ion-card-title>
+      <ion-card-subtitle> {{ movie.tagline }} </ion-card-subtitle>
+      <ion-text color="tertiary">
+        <span *ngFor="let g of movie.genres;  let isLast = last"> {{ g.name }} {{ !isLast ? '·' : '' }}</span>
+      </ion-text>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label color="medium">{{ movie.overview }}</ion-label>
+
+      <ion-item lines="none">
+        <ion-icon name="calendar-outline" slot="start"></ion-icon>
+        <ion-label>{{ movie.release_date | date: 'y'}}</ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-icon name="cash-outline" slot="start"></ion-icon>
+        <ion-label>{{ movie.budget| currency: 'USD' }}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-grid>
+      <ion-row >
+        <ion-col size="2" class="nav-col">
+          <ion-row class="ion-text-center" routerLink="/movies">
+            <ion-icon name="film-outline"></ion-icon>
+            <ion-label>Movies</ion-label>
+          </ion-row>
+        </ion-col>
+        <ion-col size="2" class="nav-col">
+          <ion-row class="ion-text-center" routerLink="/search">
+            <ion-icon name="search-outline"></ion-icon>
+            <ion-label>Search</ion-label>
+          </ion-row>
+        </ion-col>
+        <ion-col size="2" class="nav-col">
+          <ion-row class="ion-text-center round-button" routerLink="/create">
+            <ion-icon name="add-outline"></ion-icon>
+          </ion-row>
+        </ion-col>
+        <ion-col size="2" class="nav-col">
+          <ion-row class="ion-text-center" routerLink="/myList">
+            <ion-icon name="list-outline"></ion-icon>
+            <ion-label>MyList</ion-label>
+          </ion-row>
+        </ion-col>
+        <ion-col size="2" class="nav-col">
+          <ion-row class="ion-text-center" routerLink="/profile">
+            <ion-icon name="person-outline"></ion-icon>
+            <ion-label>Profile</ion-label>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

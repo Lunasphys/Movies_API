@@ -4,6 +4,11 @@ import { MovieService } from 'src/app/services/movie.service';
 import { environment } from 'src/environments/environment';
 
 interface Movie {
+  genre_ids: string;
+  runtime: string;
+  vote_average: string;
+  release_date: Date ;
+  poster_path: string;
     id: number;
     title: string;
 }
@@ -36,8 +41,8 @@ export class MoviesPage implements OnInit {
 
         this.movieService.getTopRatedMovies(this.currentPage).subscribe(
             (res) => {
-                loading.dismiss();
-                this.movies.push(...res.results);
+              loading.dismiss();
+              this.movies.push(...res.results.slice(0, 4));
 
                 event?.target.complete();
                 if (event) {

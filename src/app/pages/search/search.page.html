@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">search</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-grid>
+      <ion-row >
+        <ion-col size="2" class="nav-col">
+          <ion-row class="ion-text-center" routerLink="/movies">
+            <ion-icon name="film-outline"></ion-icon>
+            <ion-label>Movies</ion-label>
+          </ion-row>
+        </ion-col>
+        <ion-col size="2" class="nav-col">
+          <ion-row class="ion-text-center" routerLink="/search">
+            <ion-icon name="search-outline"></ion-icon>
+            <ion-label>Search</ion-label>
+          </ion-row>
+        </ion-col>
+        <ion-col size="2" class="nav-col">
+          <ion-row class="ion-text-center round-button" routerLink="/create">
+            <ion-icon name="add-outline"></ion-icon>
+          </ion-row>
+        </ion-col>
+        <ion-col size="2" class="nav-col">
+          <ion-row class="ion-text-center" routerLink="/myList">
+            <ion-icon name="list-outline"></ion-icon>
+            <ion-label>MyList</ion-label>
+          </ion-row>
+        </ion-col>
+        <ion-col size="2" class="nav-col">
+          <ion-row class="ion-text-center" routerLink="/profile">
+            <ion-icon name="person-outline"></ion-icon>
+            <ion-label>Profile</ion-label>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
+
+
+

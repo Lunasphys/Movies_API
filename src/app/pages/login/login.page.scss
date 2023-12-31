@@ -1,0 +1,57 @@
+.container {
+  display: flex;
+  height: 100%;
+  margin-top : -36%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');  font-family: 'Inter', sans-serif;
+
+  .logo {
+    margin-bottom: 10%;
+    img {
+      object-fit: contain;
+      width : 80%;
+    }
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .input-container {
+    --background : #3C363F;
+    width: 80%;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin: 10px auto;
+    background-color: #d6d3da;
+    --padding-start: 10px;
+  }
+
+  .message {
+    color: #bb86fc;
+    margin: 20px 0;
+    font-size: 10px;
+  }
+
+  .signIn-button {
+    --color: #dedcdc;
+    --background: #5B5B5B;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin: 10px auto;
+    background-color: #d6d3da;
+    --padding-start: 10px;
+  }
+
+}
+
+ion-content {
+  --background: linear-gradient(#2A282D, #131113)
+}
+
+
