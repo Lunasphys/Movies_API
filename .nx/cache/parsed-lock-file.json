@@ -1309,9 +1309,9 @@
       "type": "npm",
       "name": "npm:@capacitor/cli",
       "data": {
-        "version": "5.5.1",
+        "version": "5.6.0",
         "packageName": "@capacitor/cli",
-        "hash": "sha512-/oGd2IIc+k1H/fc7tUzP7vqMtZi0gNcJ4/4wUE2kzAnETxxxHXMM/2V62KfjCby/OOAzJbtI7n5OPlnWE9un1A=="
+        "hash": "sha512-h2HLkjPn+hd95F0iOlSWROW15kxj/0qNuzXgktSNQ55Z3dCeWmelgfkbYwjo0eqiunv5zNa31H0YvrpnIVdKEA=="
       }
     },
     "npm:@capacitor/core": {
@@ -6867,15 +6867,6 @@
         "hash": "sha512-QQnnxNyfvmHFIsj7gkPcYymR8Jdw/o7mp5ZFihxn6h8Ci6fh3Dx4E1gPjpQEpIuPo9XVNY/ZUwh4BPMjGyL01g=="
       }
     },
-    "npm:ini@3.0.1": {
-      "type": "npm",
-      "name": "npm:ini@3.0.1",
-      "data": {
-        "version": "3.0.1",
-        "packageName": "ini",
-        "hash": "sha512-it4HyVAUTKBc6m8e1iXWvXSTdndF7HbdN713+kvLrymxTaU4AUBWrJ4vEooP+V7fexnVD3LKcBshjGGPefSMUQ=="
-      }
-    },
     "npm:inquirer": {
       "type": "npm",
       "name": "npm:inquirer",
@@ -8203,9 +8194,9 @@
       "type": "npm",
       "name": "npm:native-run",
       "data": {
-        "version": "1.7.4",
+        "version": "2.0.0",
         "packageName": "native-run",
-        "hash": "sha512-yDEwTp66vmXpqFiSQzz4sVQgyq5U58gGRovglY4GHh12ITyWa6mh6Lbpm2gViVOVD1JYFtYnwcgr7GTFBinXNA=="
+        "hash": "sha512-NKOoSLt3Xi7EDxo62ii7i6IBpQ8EAOwli8EZooPWeAUPP9Vwsptm5khbeSKBSjlIE4XOtuG24QJQEGqy//HFbA=="
       }
     },
     "npm:natural-compare": {
@@ -20192,7 +20183,7 @@
     },
     {
       "source": "npm:native-run",
-      "target": "npm:ini@3.0.1",
+      "target": "npm:ini",
       "type": "static"
     },
     {

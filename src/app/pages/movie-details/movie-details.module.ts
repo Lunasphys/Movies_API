@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { MovieDetailsPageRoutingModule } from './movie-details-routing.module';
 
 import { MovieDetailsPage } from './movie-details.page';
+import {FooterComponent} from "../../shared/footer/footer.component";
+import {SharedModule} from "../../shared/shared.module";
 
 @NgModule({
   imports: [
@@ -14,6 +16,7 @@ import { MovieDetailsPage } from './movie-details.page';
     FormsModule,
     IonicModule,
     MovieDetailsPageRoutingModule,
+    SharedModule,
   ],
   declarations: [MovieDetailsPage]
 })

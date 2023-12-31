@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { MyListPageRoutingModule } from './my-list-routing.module';
 
 import { MyListPage } from './my-list.page';
+import {SharedModule} from "../../shared/shared.module";
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MyListPageRoutingModule
+    MyListPageRoutingModule,
+    SharedModule
   ],
   declarations: [MyListPage]
 })

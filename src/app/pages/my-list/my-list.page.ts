@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MyListService} from "../../services/my-list.service";
 
 @Component({
   selector: 'app-my-list',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyListPage implements OnInit {
 
-  constructor() { }
+  movies$ = this.myListService.getMovies();
 
+  constructor(private myListService: MyListService) { }
+  removeFromList(movie: any) {
+    this.myListService.removeMovie(movie);
+  }
   ngOnInit() {
   }
 

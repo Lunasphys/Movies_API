@@ -5,6 +5,8 @@ import { IonicModule } from '@ionic/angular';
 import { SearchPageRoutingModule } from './search-routing.module';
 import { SearchPage } from './search.page';
 import { ReactiveFormsModule } from '@angular/forms';
+import {FooterComponent} from "../../shared/footer/footer.component";
+import {SharedModule} from "../../shared/shared.module";
 
 @NgModule({
   imports: [
@@ -13,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     IonicModule,
     SearchPageRoutingModule,
     ReactiveFormsModule,
+    SharedModule
   ],
   declarations: [SearchPage]
 })
