@@ -8,6 +8,7 @@ import { MyListPageRoutingModule } from './my-list-routing.module';
 
 import { MyListPage } from './my-list.page';
 import {SharedModule} from "../../shared/shared.module";
+import {IonicStorageModule} from "@ionic/storage-angular";
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import {SharedModule} from "../../shared/shared.module";
     FormsModule,
     IonicModule,
     MyListPageRoutingModule,
-    SharedModule
+    SharedModule,
+    IonicStorageModule.forRoot(),
   ],
   declarations: [MyListPage]
 })

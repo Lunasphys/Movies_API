@@ -18,6 +18,7 @@
     "@capacitor/status-bar": "5.0.6",
     "@ionic/angular": "^7.0.0",
     "@ionic/lab": "^3.2.15",
+    "@ionic/storage-angular": "^4.0.0",
     "android": "0.0.8",
     "ionicons": "^7.0.0",
     "rxjs": "~7.8.0",
@@ -75,19 +76,19 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "19774094333329893"
+        "hash": "12376575031811372330"
       },
       {
         "file": ".nx/cache/lockfile.hash",
-        "hash": "16699926459085845817"
+        "hash": "5719083078833980520"
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "6933281966685487772"
+        "hash": "3749016413838282305"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "11213726542148686365"
+        "hash": "18330099796482142696"
       },
       {
         "file": ".vscode/extensions.json",
@@ -339,11 +340,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "14591356527767387468"
+        "hash": "6989426876176558450"
       },
       {
         "file": "package.json",
-        "hash": "398762788425668495"
+        "hash": "12684904982421180234"
       },
       {
         "file": "resources/README.md",
@@ -855,11 +856,11 @@
       },
       {
         "file": "src/environments/environment.prod.ts",
-        "hash": "12261953751420646190"
+        "hash": "2773486370446150274"
       },
       {
         "file": "src/environments/environment.ts",
-        "hash": "5183335900169661833"
+        "hash": "15317220063291647664"
       },
       {
         "file": "src/global.scss",
