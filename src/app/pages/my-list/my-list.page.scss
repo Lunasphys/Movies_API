@@ -15,5 +15,8 @@ ion-label{
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 175px;
+}
 
+ion-item-sliding ion-item button{
+  --background: none;
 }

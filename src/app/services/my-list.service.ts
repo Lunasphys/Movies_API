@@ -27,6 +27,7 @@ export class MyListService {
     await this.storage.set('movies', uniqueMovies);
   }
 
+  // Duplicity check based on movie id
   private removeDuplicates(movies: any[]) {
     return movies.filter((movie, index, self) =>
       index === self.findIndex(m => m.id === movie.id)
@@ -47,6 +48,7 @@ export class MyListService {
     const currentMovies = this.movies.getValue();
     this.movies.next(currentMovies.filter(m => m.id !== movie.id));
     this.saveMoviesToStorage().then(r => console.log('Movies saved to storage'));
+    this.loadMoviesFromStorage().then(r => console.log('Movies loaded from storage'));
   }
   private async loadMoviesFromStorage() {
     try {

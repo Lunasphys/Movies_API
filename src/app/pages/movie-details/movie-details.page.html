@@ -18,10 +18,6 @@
         <span *ngFor="let g of movie.genres;  let isLast = last"> {{ g.name }} {{ !isLast ? '·' : '' }}</span>
       </ion-text>
       <ion-button (click)="addToList()">Add to My List</ion-button>
-      <ion-alert>
-        <ion-title>Added to My List</ion-title>
-        <ion-button (click)="dismiss()">OK</ion-button>
-      </ion-alert>
     </ion-card-header>
     <ion-card-content>
       <ion-label color="medium">{{ movie.overview }}</ion-label>

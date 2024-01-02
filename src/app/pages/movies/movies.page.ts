@@ -42,7 +42,7 @@ export class MoviesPage implements OnInit {
         this.movieService.getTopRatedMovies(this.currentPage).subscribe(
             (res) => {
               loading.dismiss();
-              this.movies.push(...res.results.slice(0, 4));
+              this.movies.push(...res.results.slice(0, 8));
 
                 event?.target.complete();
                 if (event) {
@@ -58,6 +58,8 @@ export class MoviesPage implements OnInit {
 
     loadMore(event: InfiniteScrollCustomEvent) {
         this.currentPage++;
-        this.loadMovies(event);
+        this.loadMovies(event).then(r => console.log(r));
     }
 }
+
+
