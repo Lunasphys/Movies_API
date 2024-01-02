@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { debounceTime, switchMap } from 'rxjs/operators';
 import { MovieService } from '../../services/movie.service';
+import {environment} from "../../../environments/environment";
 
 @Component({
   selector: 'app-search',
@@ -12,6 +13,7 @@ import { MovieService } from '../../services/movie.service';
 export class SearchPage implements OnInit {
   searchControl = new FormControl();
   results$!: Observable<any>;
+  imageBaseUrl: string = environment.images;
 
   constructor(private movieService: MovieService) {}
 

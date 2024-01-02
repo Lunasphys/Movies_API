@@ -1,0 +1,38 @@
+ion-content {
+  --background: linear-gradient(180deg, #2B282D 50%, #000 108.63%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-content ion-avatar {
+  width: 100px;
+  height: 100px;
+  margin: 5% auto;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+ion-content ion-card {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 25px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+ion-content ion-card ion-label {
+  margin: 10%;
+}
+
+ion-content ion-card ion-button {
+  --color: #fff;
+  --background: #5B5B5B;
+  margin: 10% auto;
+  width: 80%;
+  height: 50px;
+
+}

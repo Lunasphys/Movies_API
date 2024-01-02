@@ -3,6 +3,10 @@ ion-header {
   --background: violet;
 }
 
+ion-content {
+  --background: linear-gradient(180deg, #2B282D 50%, #000 108.63%);
+}
+
 .swiper-container {
   width:  100%;
   height: 100%;

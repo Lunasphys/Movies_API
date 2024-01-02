@@ -32,7 +32,7 @@ const routes: Routes = [
     loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
   },
   {
-    path: 'profil',
+    path: 'profile',
     loadChildren: () => import('./pages/profil/profil.module').then( m => m.ProfilPageModule)
   },
 ];

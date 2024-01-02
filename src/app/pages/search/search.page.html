@@ -1,17 +1,24 @@
-<ion-header [translucent]="true">
+<ion-header >
   <ion-toolbar>
-    <ion-title>search</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; margin-left: -12.5%">
+      <span style="color:white">Cine</span><span style="color:violet">Sync</span>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
   <ion-item>
-    <ion-label position="floating">Search Movies</ion-label>
-    <input type="text" [formControl]="searchControl">
+    <input type="text" placeholder="Search Movies" [formControl]="searchControl">
   </ion-item>
   <ion-list>
     <ion-item *ngFor="let movie of results$ | async" [routerLink]="['/movies', movie.id]">
+      <ion-avatar slot="start">
+        <img [src]="imageBaseUrl + '/w92' + movie.poster_path" />
+      </ion-avatar>
       {{ movie.title }}
     </ion-item>
   </ion-list>

@@ -1,6 +1,11 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>myList</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: center; margin-left: -12.5%">
+      <span style="color:white">Cine</span><span style="color:violet">Sync</span>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,9 +17,16 @@
   </ion-header>
 
   <ion-list>
-    <ion-item *ngFor="let movie of movies$ | async">
-      {{ movie.title }}
-      <button (click)="removeFromList(movie)">Remove</button>
+    <ion-item button *ngFor="let movie of movies$ | async" [routerLink]="[movie.id]">
+      <ion-avatar slot="start">
+        <img [src]="imageBaseUrl + '/w92' + movie.poster_path" />
+      </ion-avatar>
+      <ion-label>
+        {{ movie.title }}
+      </ion-label>
+      <button (click)="removeFromList(movie)" slot="end">
+        <ion-icon name="trash"></ion-icon>
+      </button>
     </ion-item>
   </ion-list>
 </ion-content>

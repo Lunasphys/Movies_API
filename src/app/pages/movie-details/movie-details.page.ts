@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { MovieService } from 'src/app/services/movie.service';
 import { environment } from 'src/environments/environment';
 import {MyListService} from "../../services/my-list.service";
+// import { Dialog } from '@capacitor/dialog';
 
 @Component({
   selector: 'app-movie-details',
@@ -22,6 +23,12 @@ export class MovieDetailsPage implements OnInit {
 
   addToList() {
     this.myListService.addMovie(this.movie);
+    // const showAlert = async () => {
+    //   await Dialog.alert({
+    //     title: 'Success',
+    //     message: 'Movie added to your list',
+    //   });
+    // };
   }
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');

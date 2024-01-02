@@ -1,0 +1,19 @@
+ion-content {
+  --background: linear-gradient(180deg, #2B282D 50%, #000 108.63%);
+}
+
+ion-list ion-item {
+  --color: #fff;
+  --placeholder-color: #fff;
+  --icon-color: #fff;
+  --clear-button-color: #fff;
+  --border-radius: 4px;
+}
+
+ion-label{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 175px;
+
+}
