@@ -23,8 +23,12 @@ export class MyListService {
 
   addMovie(movie: any) {
     const currentMovies = this.movies.getValue();
-    this.movies.next([...currentMovies, movie]);
-    this.saveMoviesToStorage().then(r => console.log('Movies saved to storage'));
+    if (!currentMovies.includes(movie)) {
+      this.movies.next([...currentMovies, movie]);
+      this.saveMoviesToStorage().then(r => console.log('Movies saved to storage'));
+    } else {
+      console.log('Ce film a déjà été ajouté.');
+    }
   }
 
   removeMovie(movie: any) {
