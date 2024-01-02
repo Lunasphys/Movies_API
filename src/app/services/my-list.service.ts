@@ -21,9 +21,21 @@ export class MyListService {
     return this.movies.asObservable();
   }
 
+  private async saveMoviesToStorage() {
+    const currentMovies = this.movies.getValue();
+    const uniqueMovies = this.removeDuplicates(currentMovies);
+    await this.storage.set('movies', uniqueMovies);
+  }
+
+  private removeDuplicates(movies: any[]) {
+    return movies.filter((movie, index, self) =>
+      index === self.findIndex(m => m.id === movie.id)
+    );
+  }
+
   addMovie(movie: any) {
     const currentMovies = this.movies.getValue();
-    if (!currentMovies.includes(movie)) {
+    if (!currentMovies.some(m => m.id === movie.id)) {
       this.movies.next([...currentMovies, movie]);
       this.saveMoviesToStorage().then(r => console.log('Movies saved to storage'));
     } else {
@@ -36,7 +48,6 @@ export class MyListService {
     this.movies.next(currentMovies.filter(m => m.id !== movie.id));
     this.saveMoviesToStorage().then(r => console.log('Movies saved to storage'));
   }
-
   private async loadMoviesFromStorage() {
     try {
       const storedMovies = await this.storage.get('movies');
@@ -48,8 +59,4 @@ export class MyListService {
     }
   }
 
-  private async saveMoviesToStorage() {
-    const currentMovies = this.movies.getValue();
-    await this.storage.set('movies', currentMovies);
-  }
 }
