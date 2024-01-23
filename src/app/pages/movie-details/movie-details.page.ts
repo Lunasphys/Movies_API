@@ -3,7 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { MovieService } from 'src/app/services/movie.service';
 import { environment } from 'src/environments/environment';
 import {MyListService} from "../../services/my-list.service";
-
+// export const movieListKey ={
+//   key : 0,
+// };
 @Component({
   selector: 'app-movie-details',
   templateUrl: './movie-details.page.html',
@@ -12,6 +14,7 @@ import {MyListService} from "../../services/my-list.service";
 export class MovieDetailsPage implements OnInit {
   movie: any | null = null;
   imageBaseUrl = environment.images;
+  alertButtons = ['Close'];
 
   constructor(
     private route: ActivatedRoute,

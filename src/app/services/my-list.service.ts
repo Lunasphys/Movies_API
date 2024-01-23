@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Storage } from '@ionic/storage-angular';
+export const movieListKey ={
+  key : 0,
+};
 
 @Injectable({
   providedIn: 'root',
@@ -25,6 +28,7 @@ export class MyListService {
     const currentMovies = this.movies.getValue();
     const uniqueMovies = this.removeDuplicates(currentMovies);
     await this.storage.set('movies', uniqueMovies);
+    movieListKey.key+=1;
   }
 
   // Duplicity check based on movie id
@@ -48,7 +52,7 @@ export class MyListService {
     const currentMovies = this.movies.getValue();
     this.movies.next(currentMovies.filter(m => m.id !== movie.id));
     this.saveMoviesToStorage().then(r => console.log('Movies saved to storage'));
-    this.loadMoviesFromStorage().then(r => console.log('Movies loaded from storage'));
+    movieListKey.key-=1;
   }
   private async loadMoviesFromStorage() {
     try {

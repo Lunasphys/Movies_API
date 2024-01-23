@@ -17,7 +17,8 @@
       <ion-text color="tertiary">
         <span *ngFor="let g of movie.genres;  let isLast = last"> {{ g.name }} {{ !isLast ? '·' : '' }}</span>
       </ion-text>
-      <ion-button (click)="addToList()">Add to My List</ion-button>
+      <ion-button id="present-alert" (click)="addToList()">Add to My List</ion-button>
+      <ion-alert trigger="present-alert" header="Success" message="Movie added to list" [buttons]="alertButtons"></ion-alert>
     </ion-card-header>
     <ion-card-content>
       <ion-label color="medium">{{ movie.overview }}</ion-label>
@@ -35,5 +36,3 @@
   </ion-card>
 </ion-content>
 <app-footer></app-footer>
-```
-

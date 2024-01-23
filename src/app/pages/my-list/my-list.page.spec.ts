@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MyListPage } from './my-list.page';
+import {async} from "rxjs";
 
 describe('MyListPage', () => {
   let component: MyListPage;

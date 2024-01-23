@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {MyListService} from "../../services/my-list.service";
 import { Storage } from '@ionic/storage-angular';
 import {environment} from "../../../environments/environment";
+// import {movieListKey} from "../movie-details/movie-details.page";
 
 @Component({
   selector: 'app-my-list',

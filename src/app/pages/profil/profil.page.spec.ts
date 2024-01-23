@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProfilPage } from './profil.page';
+import {async} from "rxjs";
 
 describe('ProfilPage', () => {
   let component: ProfilPage;

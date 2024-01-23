@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {movieListKey} from "../../services/my-list.service";
 
 @Component({
   selector: 'app-profil',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilPage implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() {
   }
 
+  async ngOnInit() {
+  }
+
+  protected readonly movieListKey = movieListKey;
 }
