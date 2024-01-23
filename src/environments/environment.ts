@@ -8,6 +8,15 @@ export const environment = {
   apiKey: '27a984d720b43e1df4ab675ed1edc2d3', // <-- Enter your own key here!'
   baseUrl: 'https://api.themoviedb.org/3',
   images: 'https://image.tmdb.org/t/p',
+  firebaseConfig: {
+    apiKey: 'AIzaSyDp6vgGL0cacCMK8v81bEz0AcxQz4Q_awY',
+    authDomain: 'movieapp-fb475.firebaseapp.com',
+    projectId: 'movieapp-fb475',
+    storageBucket: 'movieapp-fb475.appspot.com',
+    messagingSenderId: '146520480100',
+    appId: '1:146520480100:android:9caa7925526633c0454271',
+  },
+
 };
 
 

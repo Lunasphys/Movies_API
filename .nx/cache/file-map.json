@@ -6,6 +6,7 @@
     "@angular/common": "^17.0.2",
     "@angular/compiler": "^17.0.2",
     "@angular/core": "^17.0.2",
+    "@angular/fire": "^17.0.0",
     "@angular/forms": "^17.0.2",
     "@angular/platform-browser": "^17.0.2",
     "@angular/platform-browser-dynamic": "^17.0.2",
@@ -15,13 +16,15 @@
     "@capacitor/core": "^5.5.1",
     "@capacitor/haptics": "5.0.6",
     "@capacitor/keyboard": "5.0.6",
+    "@capacitor/push-notifications": "^5.1.0",
     "@capacitor/status-bar": "5.0.6",
     "@ionic/angular": "^7.0.0",
     "@ionic/lab": "^3.2.15",
     "@ionic/storage-angular": "^4.0.0",
     "android": "0.0.8",
+    "firebase": "^10.7.1",
     "ionicons": "^7.0.0",
-    "rxjs": "~7.8.0",
+    "rxjs": "^7.8.1",
     "swiper": "^11.0.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2",
@@ -76,19 +79,19 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "12376575031811372330"
+        "hash": "17562399750586926858"
       },
       {
         "file": ".nx/cache/lockfile.hash",
-        "hash": "5719083078833980520"
+        "hash": "17208204610568175546"
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "3749016413838282305"
+        "hash": "2867520820008546628"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "18330099796482142696"
+        "hash": "15743882523548995231"
       },
       {
         "file": ".vscode/extensions.json",
@@ -112,11 +115,15 @@
       },
       {
         "file": "android/app/build.gradle",
-        "hash": "5671592058605262406"
+        "hash": "731701781346901038"
       },
       {
         "file": "android/app/capacitor.build.gradle",
-        "hash": "321577693221425197"
+        "hash": "14684001767628624040"
+      },
+      {
+        "file": "android/app/google-services.json",
+        "hash": "10417846259070934642"
       },
       {
         "file": "android/app/proguard-rules.pro",
@@ -128,7 +135,7 @@
       },
       {
         "file": "android/app/src/main/AndroidManifest.xml",
-        "hash": "15143078514206279353"
+        "hash": "18332594262889494806"
       },
       {
         "file": "android/app/src/main/java/com/example/app/MainActivity.java",
@@ -264,7 +271,7 @@
       },
       {
         "file": "android/app/src/main/res/values/strings.xml",
-        "hash": "1034377517779682783"
+        "hash": "3101835227994672038"
       },
       {
         "file": "android/app/src/main/res/values/styles.xml",
@@ -280,11 +287,11 @@
       },
       {
         "file": "android/build.gradle",
-        "hash": "15247024166514751308"
+        "hash": "8240229365641188249"
       },
       {
         "file": "android/capacitor.settings.gradle",
-        "hash": "14622451423594914531"
+        "hash": "737531045067515446"
       },
       {
         "file": "android/gradle/wrapper/gradle-wrapper.jar",
@@ -292,7 +299,7 @@
       },
       {
         "file": "android/gradle/wrapper/gradle-wrapper.properties",
-        "hash": "10340632815092109200"
+        "hash": "4759541775285973262"
       },
       {
         "file": "android/gradle.properties",
@@ -308,7 +315,7 @@
       },
       {
         "file": "android/settings.gradle",
-        "hash": "426215723856156424"
+        "hash": "10078203821176160458"
       },
       {
         "file": "android/variables.gradle",
@@ -324,7 +331,7 @@
       },
       {
         "file": "capacitor.config.ts",
-        "hash": "8621695873448853000"
+        "hash": "14498043127095518180"
       },
       {
         "file": "config.xml",
@@ -340,11 +347,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "6989426876176558450"
+        "hash": "17037883212444001220"
       },
       {
         "file": "package.json",
-        "hash": "12684904982421180234"
+        "hash": "17066789928933879118"
       },
       {
         "file": "resources/README.md",
@@ -632,11 +639,11 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "7551644384611326250"
+        "hash": "12274581818555103314"
       },
       {
         "file": "src/app/app.module.ts",
-        "hash": "18031119567011447618"
+        "hash": "5629823987913139444"
       },
       {
         "file": "src/app/home/home-routing.module.ts",
@@ -660,7 +667,7 @@
       },
       {
         "file": "src/app/home/home.page.ts",
-        "hash": "1571215977137710084"
+        "hash": "6414123948097532468"
       },
       {
         "file": "src/app/pages/login/login-routing.module.ts",
@@ -732,7 +739,7 @@
       },
       {
         "file": "src/app/pages/movies/movies.page.ts",
-        "hash": "10546469579522494413"
+        "hash": "14468669031870384489"
       },
       {
         "file": "src/app/pages/my-list/my-list-routing.module.ts",
@@ -740,7 +747,7 @@
       },
       {
         "file": "src/app/pages/my-list/my-list.module.ts",
-        "hash": "962380413937214317"
+        "hash": "4878773052297876121"
       },
       {
         "file": "src/app/pages/my-list/my-list.page.html",
@@ -756,7 +763,7 @@
       },
       {
         "file": "src/app/pages/my-list/my-list.page.ts",
-        "hash": "1624018482852523426"
+        "hash": "13806425201874268940"
       },
       {
         "file": "src/app/pages/profil/profil-routing.module.ts",
@@ -812,11 +819,19 @@
       },
       {
         "file": "src/app/services/movie.service.ts",
-        "hash": "18114210310678952923"
+        "hash": "6453220496361965997"
       },
       {
         "file": "src/app/services/my-list.service.ts",
-        "hash": "4989840151226518455"
+        "hash": "8391521114202039674"
+      },
+      {
+        "file": "src/app/services/push-notification.service.spec.ts",
+        "hash": "7393795536226745792"
+      },
+      {
+        "file": "src/app/services/push-notification.service.ts",
+        "hash": "808454644883957349"
       },
       {
         "file": "src/app/shared/footer/footer.component.html",
@@ -860,7 +875,7 @@
       },
       {
         "file": "src/environments/environment.ts",
-        "hash": "15317220063291647664"
+        "hash": "3907633972373344413"
       },
       {
         "file": "src/global.scss",
@@ -872,7 +887,7 @@
       },
       {
         "file": "src/main.ts",
-        "hash": "3447864527603543144"
+        "hash": "13350892157743512745"
       },
       {
         "file": "src/polyfills.ts",

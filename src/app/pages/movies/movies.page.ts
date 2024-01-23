@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import { InfiniteScrollCustomEvent, LoadingController } from '@ionic/angular';
 import { MovieService } from 'src/app/services/movie.service';
 import { environment } from 'src/environments/environment';
@@ -25,7 +25,7 @@ export class MoviesPage implements OnInit {
 
     constructor(
         private movieService: MovieService,
-        private loadingCtrl: LoadingController
+        private loadingCtrl: LoadingController,
     ) {}
 
     ngOnInit() {

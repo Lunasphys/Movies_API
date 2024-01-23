@@ -9,7 +9,7 @@ export interface ApiResult {
   page: number;
   total_pages: number;
   total_results: number;
-  results: any[]; // ou possibly Movie[] si vous avez une interface Movie définie
+  results: any[];
 }
 
 @Injectable({
@@ -40,6 +40,6 @@ export class MovieService {
   searchMovies(query: string): Observable<any> {
     return this.http.get<ApiResult>(
       `${environment.baseUrl}/search/movie?api_key=${environment.apiKey}&language=en-US&query=${query}`
-    ).pipe(map(response => response.results)); // Vous pouvez maintenant accéder à `response.results` sans problème
+    ).pipe(map(response => response.results));
   }
 }
